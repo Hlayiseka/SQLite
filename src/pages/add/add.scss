@@ -1,0 +1,19 @@
+page-add {
+    .home{
+        background-image: url(../../assets/imgs/71ff25dc9f1603b04eb44209a6c7d336.jpg);
+        background-size: cover;
+    }
+    .container {
+        display: flex;
+        margin-top: 1em;
+        flex-direction: column;
+    }
+    .wrapper {
+        position: inherit;
+        flex: 1;
+    }
+    .container .btn{
+        margin: 0 auto;
+    }
+
+}

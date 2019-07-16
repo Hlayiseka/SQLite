@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center">
+      CRUD Operations
+    </ion-title>
+  </ion-navbar>
+  <ion-searchbar
+   [hidden]="isHidden"
+   (ionInput)="getItems($event)"
+   (ionClear)="isCancel()"
+   >
+  </ion-searchbar>
+</ion-header> 
+
+<ion-content padding class="home">
+    <!-- <ion-item no-lines *ngIf="Employees">
+        <p>The menu is currently empty, please click the menu below to add employee.</p>
+    </ion-item> -->
+  <div class="container">
+    <div class="wrapper">
+      <ion-list style="width: 90%">
+        <ion-item *ngFor="let employees of Employees" margin>
+          <h2>{{ employees.name }} &nbsp;&nbsp;</h2>
+          <h2>{{employees.surname}}</h2>
+          <button style="width: 10%; height: 20%" (click)="viewEmp(employees.id)" color="dark" ion-button clear item-end><ion-icon name="eye"></ion-icon></button>
+          <button style="width: 20%; height: 20%"(click)="editEmployee(employees.id)" color="dark" ion-button clear item-end><ion-icon name="create"></ion-icon></button>
+          <button ion-button (click)="delete(employees.id)" color="dark" clear item-end><ion-icon name="trash"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+      <ion-fab center bottom>
+          <button ion-fab color="skyblue"><ion-icon name="menu"></ion-icon></button>
+          <ion-fab-list side="right">
+            <button style="color: skyblue" (click)="addEmployee()" ion-fab><ion-icon name="add"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+    </div>
+  </div>
+</ion-content>

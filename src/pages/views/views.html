@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: center">
+      Employee Info
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-card *ngIf="employee" class="container">
+    <ion-list class="wrapper">
+      <ion-item>
+        Name: {{employee.name}} 
+      </ion-item>
+      <ion-item >
+        Surname: {{employee.surname}}
+      </ion-item>
+      <ion-item >
+        Contact number: {{employee.position}}
+      </ion-item>
+      <ion-item >
+        Gender: {{employee.gender}}
+      </ion-item>
+      <ion-item >
+        Email Address: {{employee.email}}
+      </ion-item>
+      <ion-item >
+        Position: {{employee.cnumber}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>
